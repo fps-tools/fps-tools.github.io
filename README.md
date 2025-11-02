@@ -2,7 +2,7 @@
 There's tons of other mouse tool websites out there! Why are you looking at this vibecoded slop that uses no libraries?
 
 Bugs:
-  Probably don't know - It wasn't just a simple gimmick website created by a Stackoverflow LLM hater, but a professional Claude clocked into work.
+  Probably don't know - It wasn't just a simple gimmick website created by a LLM hater, but a professional Claude clocked into work.
 
 Features:
 - Left out features?
