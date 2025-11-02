@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flicking - FPS Tools</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="game.css">
+    <script src="config.js"></script>
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <fps-topbar></fps-topbar>
+
+    <main class="content">
+        <div class="game-container">
+            <div class="description">
+                <p class="gray">Click as soon as you react to a target</p>
+                <h2>Calculate flickings</h2>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="stats card">
+                <div class="stat">
+                    <span class="stat-label">Hits</span>
+                    <span class="stat-value" id="hits">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Accuracy</span>
+                    <span class="stat-value" id="accuracy">0%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Avg Time</span>
+                    <span class="stat-value" id="avgTime">0ms</span>
+                </div>
+                <button class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="flicking.js"></script>
+</body>
+</html>

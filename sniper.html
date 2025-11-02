@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sniper - FPS Tools</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="game.css">
+    <script src="config.js"></script>
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <fps-topbar></fps-topbar>
+
+    <main class="content">
+        <div class="game-container">
+            <div class="description">
+                <h2>Become a professional hitscan hitman</h2>
+                <p class="gray">Sniper aim sucks? Adjust your cm/360 to this game's canvas size to assume 1 rotation around the entire canvas is how far the cm/360 in your mouse sens is. This way, it is more annoying to setup than we put the solution directly by making a 3D gameplay (because Claude can't do that. Go visit another website or an actual aim trainer)</p>
+            </div>
+            <div class="controls card">
+                <div class="control-group">
+                    <label>Width: <span id="widthValue">40</span>px</label>
+                    <input type="range" id="widthSlider" min="20" max="100" value="40">
+                </div>
+                <div class="control-group">
+                    <label>Height: <span id="heightValue">120</span>px</label>
+                    <input type="range" id="heightSlider" min="60" max="200" value="120">
+                </div>
+                <div class="control-group">
+                    <label>Speed: <span id="speedValue">2</span></label>
+                    <input type="range" id="speedSlider" min="1" max="10" value="2" step="0.5">
+                </div>
+                <div class="control-group">
+                    <label>Direction Change: <span id="dirMinValue">1</span>-<span id="dirMaxValue">3</span>s</label>
+                    <input type="range" id="dirMinSlider" min="0.1" max="5" value="1" step="0.1">
+                    <input type="range" id="dirMaxSlider" min="0.1" max="9" value="3" step="0.1">
+                </div>
+            </div>
+            <div style="position: relative;" id="gameWrapper">
+                <canvas id="gameCanvas" class="sniper"></canvas>
+            </div>
+            <div class="sniper-scope" id="sniperScope" style="display: none;">
+                <div class="scope-cutout">
+                    <div class="crosshair-h"></div>
+                    <div class="crosshair-v"></div>
+                </div>
+            </div>
+            <div class="stats card">
+                <div class="stat">
+                    <span class="stat-label">Headshots</span>
+                    <span class="stat-value" id="headshots">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Body Shots</span>
+                    <span class="stat-value" id="bodyshots">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">HS%</span>
+                    <span class="stat-value" id="hsPercent">0%</span>
+                </div>
+                <button class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="sniper.js"></script>
+</body>
+</html>

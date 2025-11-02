@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision - FPS Tools</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="game.css">
+    <script src="config.js"></script>
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <fps-topbar></fps-topbar>
+    <main class="content">
+        <div class="game-container">
+            <div class="description">
+                <h2>Another flicking activity (this description is human organic)</h2>
+                <p class="gray">Claude slapped the buzzword 'precision', as it always does, then spams a thousand 'You're absolutely right!' and calls it a day.</p>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="stats card">
+                <div class="stat"><span class="stat-label">Hits</span><span class="stat-value" id="hits">0</span></div>
+                <div class="stat"><span class="stat-label">Accuracy</span><span class="stat-value" id="accuracy">0%</span></div>
+                <div class="stat"><span class="stat-label">Avg</span><span class="stat-value" id="avgTime">0ms</span></div>
+                <button class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </main>
+    <script src="precision.js"></script>
+</body>
+</html>

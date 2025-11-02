@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridShot - FPS Tools (use an actual aim trainer not this)</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="game.css">
+    <script src="config.js"></script>
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <fps-topbar></fps-topbar>
+    <main class="content">
+        <div class="game-container">
+            <div class="description">
+                <h2>Shoot in a grid of 9 balls</h2>
+                <p class="gray">This description is human-made.</p>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="stats card">
+                <div class="stat"><span class="stat-label">Score</span><span class="stat-value" id="score">0</span></div>
+                <div class="stat"><span class="stat-label">Time</span><span class="stat-value" id="time">0.0s</span></div>
+                <button class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </main>
+    <script src="gridshot.js"></script>
+</body>
+</html>

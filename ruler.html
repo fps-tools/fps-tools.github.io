@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Ruler - FPS Tools</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="ruler.css">
+    <script src="config.js"></script>
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <fps-topbar></fps-topbar>
+    <main class="content">
+        <div class="description">
+            <h2>Measure your DPI using a ruler</h2>
+            <p class="gray">Drag the slider to measure pixels</p>
+        </div>
+        <section class="dpr-card card">
+            <div class="dpr-header">
+                <h2>Device Pixel Ratio</h2>
+                <div class="dpr-badge" id="dprBadge">
+                    <span class="dpr-label">DPR:</span>
+                    <span class="dpr-value" id="dprValue">1.00</span>
+                </div>
+            </div>
+            <p class="dpr-message gray" id="dprMessage"></p>
+        </section>
+
+        <div class="ruler-container" id="rulerContainer"></div>
+    </main>
+
+    <script src="dpr.js"></script>
+    <script src="ruler.js"></script>
+</body>
+</html>

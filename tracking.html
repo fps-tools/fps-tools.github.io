@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking - FPS Tools</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="tracking.css">
+    <script src="config.js"></script>
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <fps-topbar></fps-topbar>
+
+    <main class="content">
+        <div class="tracking-container">
+            <div class="description">
+                <h2>prepare for aimbot</h2>
+                <p class="gray">USE A REAL AIM TRAINER. ✅ why did it use a separate class instead of game-panel, it's not 🚀</p>
+            </div>
+            <div class="controls card">
+                <div class="control-group">
+                    <label>Width: <span id="widthValue">40</span>px</label>
+                    <input type="range" id="widthSlider" min="20" max="100" value="40">
+                </div>
+                <div class="control-group">
+                    <label>Height: <span id="heightValue">120</span>px</label>
+                    <input type="range" id="heightSlider" min="60" max="200" value="120">
+                </div>
+                <div class="control-group">
+                    <label>Speed: <span id="speedValue">2</span></label>
+                    <input type="range" id="speedSlider" min="1" max="10" value="2" step="0.5">
+                </div>
+                <div class="control-group">
+                    <label>Direction Change: <span id="dirMinValue">1</span>-<span id="dirMaxValue">3</span>s</label>
+                    <input type="range" id="dirMinSlider" min="0.1" max="5" value="1" step="0.1">
+                    <input type="range" id="dirMaxSlider" min="0.1" max="9" value="3" step="0.1">
+                </div>
+            </div>
+            <canvas id="trackingCanvas"></canvas>
+            <div class="stats card">
+                <div class="stat">
+                    <span class="stat-label">Time Inside</span>
+                    <span class="stat-value" id="timeInside">0.0s</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Accuracy</span>
+                    <span class="stat-value" id="accuracy">0%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Total Time</span>
+                    <span class="stat-value" id="totalTime">0.0s</span>
+                </div>
+                <button class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="tracking.js"></script>
+</body>
+</html>
